@@ -25,9 +25,9 @@ app.use("/students",studentRoute);
 app.listen(4000,()=>{
     console.log("Server started at 4000");
 })
-app.get("/", (req, res) => {
-    res.send("Welcome to the Student API"); 
-});
+// app.get("/", (req, res) => {
+//     res.send("Welcome to the Student API"); 
+// });
 
 app.get("/", (req, res) => {
     studentSchema.find({}, (err, data) => {
