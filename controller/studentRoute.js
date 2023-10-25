@@ -1,5 +1,5 @@
 const express = require("express");
-const studentSchema = require("fsdeploy-1\Model\studentschema.js");
+const studentSchema = require("../Model/studentschema.js");
 const mongoose = require("mongoose");
 
 const studentRoute = express.Router();
