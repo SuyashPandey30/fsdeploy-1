@@ -29,3 +29,12 @@ app.get("/", (req, res) => {
     res.send("Welcome to the Student API"); 
 });
 
+app.get("/", (req, res) => {
+    studentSchema.find({}, (err, data) => {
+        if (err) {
+            res.status(500).send("An error occurred while fetching data.");
+        } else {
+            res.json(data);
+        }
+    });
+});
